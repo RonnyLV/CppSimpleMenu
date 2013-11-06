@@ -5,8 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <curses.h>
-#include "MenuExtended.h"
+#include "Menu.cpp"
 
 void HelloWorld(){
 	printf("\n\n%s\n\n\n\n","This is exile");
@@ -17,7 +16,7 @@ void power(){
 	getchar();
 }
 int main(){
-	MenuExtended *MyMenu;
+	Menu *MyMenu;
 	struct MenuLine MenuLines[] = {
 		{"HelloWorld Program",&HelloWorld},
 		{"HelloWorld Program",&HelloWorld},
@@ -34,8 +33,8 @@ int main(){
 		{"Shitso",&HelloWorld},
 		{"HelloWorld for test", &power}
 	};
-	MyMenu = new MenuExtended;
-	MyMenu->setHeader("Jaunais headeris", false);
+	MyMenu = new Menu;
+	MyMenu->setHeader("Header", false);
 	if(MyMenu->setLines(MenuLines, sizeof(MenuLines) / sizeof(struct MenuLine)) == 0){
 		MyMenu->getMenu();
 		return EXIT_SUCCESS;
