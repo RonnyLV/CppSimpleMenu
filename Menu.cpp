@@ -48,7 +48,7 @@ Menu::Menu(){
     this->menuCount		=	-1;
 };
 
-void	Menu::setHeader( char p_header[] ){
+void	Menu::setHeader( const char p_header[] ){
     strcpy( this->header, p_header );
 };
 /*
@@ -58,7 +58,7 @@ void    Menu::setHeader( const char p_header[], bool p_setDecoration ){
   this->setHeader(p_header_char, p_setDecoration);
 }*/
 
-void	Menu::setHeader( char p_header[], bool p_setDecoration){
+void	Menu::setHeader( const char p_header[], bool p_setDecoration){
     char v_header[50];
 
     if ( p_setDecoration == true ) {
@@ -93,7 +93,7 @@ void	Menu::getMenu(){					//Menu izveide un handle-oðana
     int 	ch;						//Iterâcijas mainîgais
     char	v_select;					//Izvçlnes mainîgais
     while( 1==1 ){
-    system("CLS");
+    system("clear");
     if(!(this->menuCount < 0)){
         this->printMenu();
         while( 1 == 1 ){

@@ -1,7 +1,3 @@
-#pragma hdrstop
-#pragma argsused
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -34,7 +30,7 @@ int main(){
 		{"HelloWorld for test", &power}
 	};
 	MyMenu = new Menu;
-	MyMenu->setHeader("Header", false);
+        MyMenu->setHeader("Menu Example", true);
 	if(MyMenu->setLines(MenuLines, sizeof(MenuLines) / sizeof(struct MenuLine)) == 0){
 		MyMenu->getMenu();
 		return EXIT_SUCCESS;

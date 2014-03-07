@@ -59,11 +59,11 @@ class Menu{
 	public:
                 Menu();
 
-		void	setHeader( char p_header[] );
+		void	setHeader( const char p_header[] );
 
 		//void	setHeader( const char p_header[], bool p_setDecoration);
 
-		void	setHeader( char p_header[], bool p_setDecoration);
+		void	setHeader ( const char p_header[], bool p_setDecoration);
 
 		void	setInputText( char p_inputText[] );
 
